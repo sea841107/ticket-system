@@ -1,0 +1,22 @@
+{
+  "name": "ticket-system",
+  "version": "1.0.0",
+  "description": "Automatically buy ticket",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dd",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  },
+  "dependencies": {
+    "image-js": "^0.35.5",
+    "lodash": "^4.17.21",
+    "python-shell": "^5.0.0"
+  }
+}
