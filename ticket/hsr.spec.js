@@ -3,12 +3,12 @@ import * as Captcha from '../utils/captcha';
 
 const CAPTCHA_PATH = 'image/captcha.png';
 const SETTING = {
-    StartStation: 'YOUR_START_STATION', // 南港
-    DestinationStation: 'YOUR_DESTINATION_STATION', // 台北
-    Date: 'YOUR_DATE', // 2024/01/01
-    Time: 'YOUR_TIME', // 00:00
-    TicketCount: 'YOUR_TICKET_COUNT', // 1
-    IdentityCode: 'YOUR_IDENTITY_CODE', // A123456789
+    StartStation: '南港', // 南港
+    DestinationStation: '左營', // 台北
+    Date: '2024/01/30', // 2024/01/01
+    Time: '08:00', // 00:00
+    TicketCount: '1', // 1
+    IdentityCode: 'A123456789', // A123456789
 }
 
 test.describe('hsr', () => {
@@ -92,7 +92,7 @@ async function waitSolveCaptchaAndSearch(page) {
         await page.locator('select[name="ticketPanel\\:rows\\:0\\:ticketAmount"]').selectOption(SETTING.TicketCount);
 
         // 出現錯誤訊息 重跑流程
-        return await waitSolveCaptchaAndSearch(page);
+        await waitSolveCaptchaAndSearch(page);
     } catch (error) {
         // 無錯誤訊息
         return;
